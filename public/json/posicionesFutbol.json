@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Portero",
+    "posicion": "POR"
+  },
+  {
+    "nombre": "Lateral Izquierdo",
+    "posicion": "LI"
+  },
+  {
+    "nombre": "Lateral Derecho",
+    "posicion": "LD"
+  },
+  {
+    "nombre": "Defensa Central",
+    "posicion": "DFC"
+  },
+  {
+    "nombre": "Mediocampista centro defensivo",
+    "posicion": "MCD"
+  },
+  {
+    "nombre": "Mediocampista Ofensivo Derecho",
+    "posicion": "MD"
+  },
+  {
+    "nombre": "Mediocampista Ofensivo Izquierdo",
+    "posicion": "MI"
+  },
+  {
+    "nombre": "Medio centro ofensivo",
+    "posicion": "MCO"
+  },
+  {
+    "nombre": "Delantero Centro",
+    "posicion": "DC"
+  },
+  {
+    "nombre": "Segundo Delantero",
+    "posicion": "SD"
+  }
+]
