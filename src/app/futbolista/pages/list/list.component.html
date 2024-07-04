@@ -1,1 +1,32 @@
-<p>list works!</p>
+<h1>Listado de Futbolistas</h1>
+<mat-divider></mat-divider>
+
+<div class="grid bm-8 pt-2">
+
+  <div class="col-12 sm:col-4 md:col-3 xl:col-2" *ngFor="let futbolista of futbolistas">
+
+    <mat-card>
+      <img mat-card-image [src]="futbolista.imagen" [alt]="futbolista.nombre">
+      <mat-card-header>
+        <mat-card-title>{{ futbolista.nombre }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-actions style="justify-content: space-between;">
+        <button mat-button mat-raised color="primary" [routerLink]="['/futbolista/edit', futbolista.uid ]">
+          <mat-icon>edit</mat-icon>
+          Editar
+        </button>
+
+        <button mat-button mat-raised [routerLink]="['/futbolista', futbolista.uid ]">
+          <mat-icon>more_horiz</mat-icon>
+          Ver más
+        </button>
+      </mat-card-actions>
+
+    </mat-card>
+
+  </div>
+
+</div>

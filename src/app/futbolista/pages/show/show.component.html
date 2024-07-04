@@ -1,1 +1,54 @@
-<p>show works!</p>
+
+
+<div class="grid p-2">
+
+  <mat-card class="col-12 sm:col-6">
+    <img mat-card-image [src]="futbolista.imagen" [alt]="futbolista.nombre" />
+  </mat-card>
+
+  <mat-card class="col-12 sm:col-6">
+    <mat-card-header>
+      <mat-card-title>Información</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <span matListItemTitle><strong>Nombre:</strong></span>
+          <span matListItemLine>{{ futbolista.nombre }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle><strong>Apodo:</strong></span>
+          <span matListItemLine>{{ futbolista.apodo }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle><strong>Nacionalidad:</strong></span>
+          <span matListItemLine>{{ futbolista.nacionalidad }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <span matListItemTitle><strong>Posicion:</strong></span>
+          <span matListItemLine>{{ futbolista.posicion }}</span>
+        </mat-list-item>
+
+
+        <mat-list-item role="listitem"><strong>Equipos:</strong></mat-list-item>
+        <mat-chip-listbox>
+          <mat-list-item role="listitem">
+
+            <mat-chip *ngFor="let equipo of futbolista.equipos?.split(',')">
+              {{ equipo }}
+            </mat-chip>
+
+          </mat-list-item>
+        </mat-chip-listbox>
+
+      </mat-list>
+
+      <button mat-button color="warn" (click)="goBack()">
+        <mat-icon>undo</mat-icon>
+        Regresar
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+</div>
