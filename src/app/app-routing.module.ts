@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { validarTokenGuard } from './guards/validar-token.guard';
 
 const routes: Routes = [
   {
@@ -8,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: 'futbolista',
-    loadChildren: () => import('./futbolista/futbolista.module').then( m => m.FutbolistaModule)
+    loadChildren: () => import('./futbolista/futbolista.module').then( m => m.FutbolistaModule),
+    canActivate: [ validarTokenGuard ]
   },
   {
     path: '**',

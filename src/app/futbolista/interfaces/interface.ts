@@ -33,3 +33,11 @@ export interface Error {
   path:     string;
   location: string;
 }
+
+
+export interface ResponseSaveFutbolista {
+  status:  boolean;
+  message: string;
+  result:  Futbolista;
+  errors?: Error[];
+}

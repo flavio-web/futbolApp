@@ -44,6 +44,7 @@ export class LoginComponent {
       }
 
       this.authService.token = token!;
+      this.authService.user = result!;
       this.router.navigate(['/futbolista']);
 
     }, ( errors ) => {

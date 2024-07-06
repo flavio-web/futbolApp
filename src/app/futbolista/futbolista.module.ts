@@ -7,6 +7,8 @@ import { MaterialModule } from '../material/material/material.module';
 import { ListComponent } from './pages/list/list.component';
 import { NewComponent } from './pages/new/new.component';
 import { ShowComponent } from './pages/show/show.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FutbolImgPipe } from './pipes/futbol-img.pipe';
 
 
 @NgModule({
@@ -14,12 +16,14 @@ import { ShowComponent } from './pages/show/show.component';
     HomeComponent,
     ListComponent,
     NewComponent,
-    ShowComponent
+    ShowComponent,
+    FutbolImgPipe
   ],
   imports: [
     CommonModule,
     FutbolistaRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class FutbolistaModule { }
